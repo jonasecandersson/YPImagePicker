@@ -142,7 +142,7 @@ extension YPLibraryView {
     }
     
     func cellSize() -> CGSize {
-        let size = UIScreen.main.bounds.width/4 * UIScreen.main.scale
+        let size = self.frame.width/4 * UIScreen.main.scale
         return CGSize(width: size, height: size)
     }
 }

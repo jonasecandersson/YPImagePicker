@@ -11,11 +11,13 @@ import Stevia
 
 class YPSelectionsGalleryView: UIView {
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: YPGalleryCollectionViewFlowLayout())
+    var collectionView: UICollectionView!
     
     convenience init() {
         self.init(frame: .zero)
-    
+        let collectionViewLayout = YPGalleryCollectionViewFlowLayout(parentView: self)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+
         sv(
             collectionView
         )
@@ -38,18 +40,30 @@ class YPSelectionsGalleryView: UIView {
 }
 
 class YPGalleryCollectionViewFlowLayout: UICollectionViewFlowLayout {
-    
-    override init() {
+
+    let sideMargin: CGFloat = 24
+    let overlapppingNextPhoto: CGFloat = 37
+    weak var parentView: UIView?
+
+    init(parentView: UIView) {
         super.init()
+        self.parentView = parentView
         scrollDirection = .horizontal
-        let sideMargin: CGFloat = 24
+
         let spacing: CGFloat = 12
-        let overlapppingNextPhoto: CGFloat = 37
+
         minimumLineSpacing = spacing
         minimumInteritemSpacing = spacing
-        let size = UIScreen.main.bounds.width - (sideMargin + overlapppingNextPhoto)
-        itemSize = CGSize(width: size, height: size)
+        updateItemSize()
         sectionInset = UIEdgeInsets(top: 0, left: sideMargin, bottom: 0, right: sideMargin)
+    }
+
+    func updateItemSize() {
+        guard let parentView = parentView else {
+            return
+        }
+        let size = parentView.frame.width - (sideMargin + overlapppingNextPhoto)
+        itemSize = CGSize(width: size, height: size)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -80,6 +80,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
         
         let currentMenuItem = v.header.menuItems[0]
         currentMenuItem.select()
+        v.header.width = viewWidth
         v.header.refreshMenuItems()
     }
     

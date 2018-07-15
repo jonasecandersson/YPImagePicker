@@ -11,11 +11,12 @@ import Stevia
 
 final class YPBottomPagerView: UIView {
     
-    var header = YPPagerMenu()
+    var header: YPPagerMenu!
     var scrollView = UIScrollView()
     
-    convenience init() {
+    convenience init(width: CGFloat) {
         self.init(frame: .zero)
+        header = YPPagerMenu(width: width)
         backgroundColor = UIColor(red: 239/255, green: 238/255, blue: 237/255, alpha: 1)
         
         sv(

@@ -77,9 +77,10 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
             v.header.menuItems.append(menuItem)
         }
         
-        let currentMenuItem = v.header.menuItems[0]
-        currentMenuItem.select()
-        v.header.refreshMenuItems()
+        if let currentMenuItem = v.header.menuItems[safe: 0] {
+            currentMenuItem.select()
+            v.header.refreshMenuItems()
+        }
     }
     
     @objc
@@ -100,9 +101,10 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
             for mi in v.header.menuItems {
                 mi.deselect()
             }
-            let currentMenuItem = v.header.menuItems[page]
-            currentMenuItem.select()
-            delegate?.pagerDidSelectController(controllers[page])
+        if let currentMenuItem = v.header.menuItems[safe: page] {
+                currentMenuItem.select()
+                delegate?.pagerDidSelectController(controllers[page])
+            }
         }
     }
     
@@ -114,7 +116,8 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
         for mi in v.header.menuItems {
             mi.deselect()
         }
-        let currentMenuItem = v.header.menuItems[page]
-        currentMenuItem.select()
+        if let currentMenuItem = v.header.menuItems[safe: page] {
+            currentMenuItem.select()
+        }
     }
 }

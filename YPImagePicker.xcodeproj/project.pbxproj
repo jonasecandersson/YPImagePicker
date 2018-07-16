@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B7880AB20FC7E8300477725 /* UIScreenMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7880AA20FC7E8300477725 /* UIScreenMocked.swift */; };
+		1B7880AD20FC8DC500477725 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7880AC20FC8DC500477725 /* Collection+Extensions.swift */; };
 		20B6BB042081E065009064E9 /* YPFilterDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6BB032081E065009064E9 /* YPFilterDescriptor.swift */; };
 		99019E4C2018CCD6007325C2 /* YPBottomPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99019E4B2018CCD6007325C2 /* YPBottomPagerView.swift */; };
 		99019E4E2018CD31007325C2 /* YPPagerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99019E4D2018CD31007325C2 /* YPPagerMenu.swift */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		1B7880AA20FC7E8300477725 /* UIScreenMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenMocked.swift; sourceTree = "<group>"; };
+		1B7880AC20FC8DC500477725 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		20B6BB032081E065009064E9 /* YPFilterDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPFilterDescriptor.swift; sourceTree = "<group>"; };
 		3B0E1B962070669B0048E95B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4EA67521208A45080076D4E3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				EB867BCE209134F100332A54 /* UIColor+Extensions.swift */,
 				EB5B07C3209146F00099C1FA /* UIButton+Extensions.swift */,
 				EB65C4B4209321420037858B /* String+Extensions.swift */,
+				1B7880AC20FC8DC500477725 /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				99B8C4C3208F8EE900127119 /* YPLoadingView.swift in Sources */,
 				99278DAA20512BFB0059532E /* PostiOS10PhotoCapture.swift in Sources */,
 				990FD297201B4A5F002A39A1 /* PHCachingImageManager+Extensions.swift in Sources */,
+				1B7880AD20FC8DC500477725 /* Collection+Extensions.swift in Sources */,
 				99CF6D23201B71DC00487F77 /* YPLibrary+LibraryChange.swift in Sources */,
 				99C6D6C51F1FB5C100711DB2 /* YPFilterCollectionViewCell.swift in Sources */,
 				990FD295201B3E59002A39A1 /* YPDragDirection.swift in Sources */,

@@ -25,7 +25,7 @@ class YPFiltersView: UIView {
             )
         )
         
-        let isIphone4 = UIScreen.main.bounds.height == 480
+        let isIphone4 = UIScreenMocked.shared.height == 480
         let sideMargin: CGFloat = isIphone4 ? 20 : 0
         
         |-sideMargin-imageView.top(0)-sideMargin-|

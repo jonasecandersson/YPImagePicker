@@ -50,7 +50,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     }
     
     func reload() {
-        let viewWidth: CGFloat = UIScreen.main.bounds.width
+        let viewWidth: CGFloat = UIScreenMocked.shared.width
         for (index, c) in controllers.enumerated() {
             c.willMove(toParentViewController: self)
             addChildViewController(c)
@@ -88,7 +88,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     }
     
     func showPage(_ page: Int, animated: Bool = true) {
-        let x = CGFloat(page) * UIScreen.main.bounds.width
+        let x = CGFloat(page) * UIScreenMocked.shared.width
         v.scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: animated)
         selectPage(page)
     }
@@ -108,7 +108,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     
     func startOnPage(_ page: Int) {
         currentPage = page
-        let x = CGFloat(page) * UIScreen.main.bounds.width
+        let x = CGFloat(page) * UIScreenMocked.shared.width
         v.scrollView.setContentOffset(CGPoint(x: x, y: 0), animated: false)
         //select menut item and deselect others
         for mi in v.header.menuItems {

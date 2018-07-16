@@ -133,7 +133,7 @@ final class YPAssetZoomableView: UIScrollView {
     }
     
     fileprivate func setAssetFrame(`for` view: UIView, with image: UIImage) {
-        let screenWidth: CGFloat = UIScreen.main.bounds.width
+        let screenWidth: CGFloat = UIScreenMocked.shared.width
         var squareZoomScale: CGFloat = 1.0
         let w = image.size.width
         let h = image.size.height

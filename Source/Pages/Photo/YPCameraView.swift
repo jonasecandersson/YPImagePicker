@@ -51,7 +51,7 @@ class YPCameraView: UIView, UIGestureRecognizerDelegate {
         }
         
         // Layout
-        let isIphone4 = UIScreen.main.bounds.height == 480
+        let isIphone4 = UIScreenMocked.shared.height == 480
         let sideMargin: CGFloat = isIphone4 ? 20 : 0
         layout(
             0,

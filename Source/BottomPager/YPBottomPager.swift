@@ -22,6 +22,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     var v: YPBottomPagerView!
     
     var currentPage = 0
+    var width: CGFloat?
     
     var currentController: UIViewController {
         return controllers[currentPage]
@@ -29,7 +30,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     
     override public func loadView() {
         self.automaticallyAdjustsScrollViewInsets = false
-        v = YPBottomPagerView(width: 100)
+        v = YPBottomPagerView()
         v.scrollView.delegate = self
         view = v
     }
@@ -51,7 +52,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     }
     
     func reload() {
-        let viewWidth: CGFloat = currentController.view.frame.width
+        let viewWidth: CGFloat = width ?? currentController.view.frame.width
         for (index, c) in controllers.enumerated() {
             c.willMove(toParentViewController: self)
             addChildViewController(c)

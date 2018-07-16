@@ -13,18 +13,17 @@ final class YPPagerMenu: UIView {
     
     var didSetConstraints = false
     var menuItems = [YPMenuItem]()
-    var width: CGFloat!
+    var width: CGFloat?
 
-    convenience init(width: CGFloat) {
+    convenience init() {
         self.init(frame: .zero)
-        self.width = width
         backgroundColor = UIColor(r: 247, g: 247, b: 247)
     }
     
     var separators = [UIView]()
     
     func setUpMenuItemsConstraints() {
-        let menuItemWidth: CGFloat = width / CGFloat(menuItems.count)
+        let menuItemWidth: CGFloat = (width ?? 200) / CGFloat(menuItems.count)
         var previousMenuItem: YPMenuItem?
         for m in menuItems {
             

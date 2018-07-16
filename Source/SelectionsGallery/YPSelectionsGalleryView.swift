@@ -12,10 +12,11 @@ import Stevia
 class YPSelectionsGalleryView: UIView {
     
     var collectionView: UICollectionView!
-    
+    var collectionViewLayout: YPGalleryCollectionViewFlowLayout!
+
     convenience init() {
         self.init(frame: .zero)
-        let collectionViewLayout = YPGalleryCollectionViewFlowLayout(parentView: self)
+        collectionViewLayout = YPGalleryCollectionViewFlowLayout(parentView: self)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
 
         sv(
@@ -36,6 +37,10 @@ class YPSelectionsGalleryView: UIView {
         backgroundColor = UIColor(r: 247, g: 247, b: 247)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
+    }
+
+    func update() {
+        collectionViewLayout.updateItemSize()
     }
 }
 

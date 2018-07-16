@@ -48,6 +48,15 @@ public class YPSelectionsGalleryVC: UIViewController {
         YPHelper.changeBackButtonTitle(self)
     }
 
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        update()
+    }
+
+    public func update() {
+        v.update()
+    }
+
     @objc
     private func done() {
         // Save new images to the photo album.

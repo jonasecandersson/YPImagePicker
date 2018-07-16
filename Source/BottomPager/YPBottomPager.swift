@@ -22,7 +22,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
     var v: YPBottomPagerView!
     
     var currentPage = 0
-    var width: CGFloat?
+    public var width: CGFloat?
     
     var currentController: UIViewController {
         return controllers[currentPage]

@@ -51,7 +51,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func reload() {
+    public func reload() {
         let viewWidth: CGFloat = width ?? currentController.view.frame.width
         for (index, c) in controllers.enumerated() {
             c.willMove(toParentViewController: self)

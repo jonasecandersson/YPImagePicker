@@ -101,7 +101,7 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
             for mi in v.header.menuItems {
                 mi.deselect()
             }
-        if let currentMenuItem = v.header.menuItems[safe: page] {
+            if let currentMenuItem = v.header.menuItems[safe: page] {
                 currentMenuItem.select()
                 delegate?.pagerDidSelectController(controllers[page])
             }
